@@ -1,0 +1,35 @@
+// a variable to hold your NFT's
+let nftroom = [];
+// this function will take in some values as parameters, created an
+// NFT object using the parameters passed to it for its metadata, 
+// and stored it in the variable above.
+function mintNFT (name,creator,material,color , dateCreated) {
+    let somenift = {
+        name : name,
+        creator: creator,
+        material: material,
+        color: color,
+        dateCreated: dateCreated
+     }
+ nftroom.push(somenift);
+}
+
+//  a "loop" that will go through an "array" of NFT's
+// and print their metadata with console.log()
+function listNFTs () {
+    for (let nft of nftroom){
+        console.log("name = "+nft.name);
+        console.log("creator name  = "+ nft.creator);
+        console.log("material = "+ nft.material);
+        console.log("color  = "+ nft.color);
+        console.log("datecreatd = "+ nft.dateCreated);
+    }
+}
+ mintNFT( 'Themerge' , 'james' , 'Digital' , 'black' , '21-07-2020' );
+// print the total number of NFTs we have created
+function getTotalSupply() {
+console.log("total number of NFTs is "+ nftroom.length);
+}
+// calling functions 
+listNFTs();
+getTotalSupply();
