@@ -1,35 +1,34 @@
-// a variable to hold your NFT's
+
+// create a variable to hold your NFT's
 let nftroom = [];
-// this function will take in some values as parameters, created an
+// this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
-// and stored it in the variable above.
-function mintNFT (name,creator,material,color , dateCreated) {
+// and store it in the variable above.
+function mintNFT (name,creator,shirttype , bling) {
     let somenift = {
         name : name,
         creator: creator,
-        material: material,
-        color: color,
-        dateCreated: dateCreated
+        shirttype : shirttype,
+        bling     : bling
      }
  nftroom.push(somenift);
 }
 
-//  a "loop" that will go through an "array" of NFT's
+// create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
 function listNFTs () {
     for (let nft of nftroom){
         console.log("name = "+nft.name);
-        console.log("creator name  = "+ nft.creator);
-        console.log("material = "+ nft.material);
-        console.log("color  = "+ nft.color);
-        console.log("datecreatd = "+ nft.dateCreated);
+        console.log("creator = "+ nft.creator);
+        console.log("shirttype = "+ nft.shirttype);
+        console.log("bling = "+ nft.bling);
     }
 }
- mintNFT( 'Themerge' , 'james' , 'Digital' , 'black' , '21-07-2020' );
-// print the total number of NFTs we have created
+ mintNFT( 'Themerge' , 'james' , 't-shirt' , 'goldenblock' );
+// print the total number of NFTs we have minted to the console
 function getTotalSupply() {
 console.log("total number of NFTs is "+ nftroom.length);
 }
-// calling functions 
+// call your functions below this line
 listNFTs();
 getTotalSupply();
